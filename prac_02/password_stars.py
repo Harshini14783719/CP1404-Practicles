@@ -12,3 +12,10 @@ def get_valid_password():
         print("Invalid Password")
         password = str(input("Enter password: "))
     return password
+
+
+def print_asterisks(password):
+    print("*" * len(password))
+
+
+main()
