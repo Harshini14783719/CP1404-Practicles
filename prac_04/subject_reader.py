@@ -22,6 +22,7 @@ def load_data():
             subject_data.append(parts)
     return subject_data
 
+
 def display_subjects(data):
     for subject, lecturer, student_count in data:
         print(f"{subject} is taught by {lecturer} and has {student_count} students")
