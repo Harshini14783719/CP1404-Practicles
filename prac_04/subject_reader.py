@@ -8,7 +8,7 @@ FILENAME = "subject_data.txt"
 
 def main():
     data = load_data()
-    print(data)
+    display_subjects(data)
 
 
 def load_data():
@@ -21,6 +21,10 @@ def load_data():
             parts[2] = int(parts[2])  # Convert number of students to int
             subject_data.append(parts)
     return subject_data
+
+def display_subjects(data):
+    for subject, lecturer, student_count in data:
+        print(f"{subject} is taught by {lecturer} and has {student_count} students")
 
 
 main()
