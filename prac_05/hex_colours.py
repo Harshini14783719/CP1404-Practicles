@@ -11,4 +11,12 @@ NAME_TO_COLOR_CODE = {
     "ICEBERG": "#71a6d2"
 }
 
+print(NAME_TO_COLOR_CODE)
 
+color_name = input("Enter color name: ").upper()
+while color_name != "":
+    try:
+        print(f"{color_name} is {NAME_TO_COLOR_CODE[color_name]}")
+    except KeyError:
+        print("Invalid color")
+    color_name = input("Enter color name: ").upper()
