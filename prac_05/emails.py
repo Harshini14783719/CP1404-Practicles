@@ -11,6 +11,12 @@ def main():
     email_to_name = {}
     email = input("Email: ").strip()
     while email != "":
+        default_name = extract_name_from_email(email)
+        confirmation = input(f"Is your name {default_name}? (y/n)").strip().lower()
+        if confirmation == "" or confirmation == "y":
+            name = default_name
+        else:
+            name = input("Name: ").strip()
 
 
 def extract_name_from_email(email):
