@@ -13,7 +13,7 @@ def main():
     email = input("Email: ").strip()
     while email != "":
         default_name = extract_name_from_email(email)
-        confirmation = input(f"Is your name {default_name}? (y/n)").strip().lower()
+        confirmation = input(f"Is your name {default_name}? (y/n) ").strip().lower()
         if confirmation == "" or confirmation == "y":
             name = default_name
         else:
@@ -23,13 +23,13 @@ def main():
         email = input("Email: ").strip()
 
     print()
-    for email in email_to_name.items():
+    for email, name in email_to_name.items():
         print(f"{name} ({email})")
 
 
 def extract_name_from_email(email):
-    name_part = email.split('@')
-    parts = name_part.replace('.', ' ').replace('_', ' ')
+    name_part = email.split('@')[0]
+    parts = name_part.replace('.', ' ').replace('_', ' ').split()
     return ' '.join(parts)
 
 
