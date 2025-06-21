@@ -7,4 +7,8 @@ def main():
 
     sorted_words = sorted(word_count.keys())
 
-   
+    for word in sorted_words:
+        print(f"{word}: {word_count[word]}")
+
+
+main()
