@@ -16,15 +16,18 @@ CODE_TO_NAME = {
 }
 
 print(CODE_TO_NAME)
-
+final_entries = []
 state_code = input("Enter short state: ").upper()
 while state_code != "":
     try:
         print(f"{state_code} is {CODE_TO_NAME[state_code]}")
+        state_name = CODE_TO_NAME[state_code]
+        final_entries.append((state_code, state_name))
     except KeyError:
         print("Invalid short state")
     state_code = input("Enter short state: ").upper()
 
-print("\n")
-for code, name in CODE_TO_NAME.items():
+print("\n Final Entries")
+for code, name in final_entries:
     print(f"{code:3} is {name}")
+
