@@ -12,6 +12,11 @@ Actual time:
 FILENAME = "wimbledon.csv"
 
 def main():
+    records = read_wimbledon_data(FILENAME)
+    champions_to_wins = count_champions(records)
+    
+
+
 
 
 
@@ -24,3 +29,10 @@ def read_wimbledon_data(filename):
             country = parts[1]
             records.append([champion, country])
         return records
+
+
+def count_champions(records):
+    champion_to_wins = {}
+    for champion, _ in records:
+        champion_to_wins[champion] = champion_to_wins.get(champion, 0) + 1
+    return champion_to_wins
