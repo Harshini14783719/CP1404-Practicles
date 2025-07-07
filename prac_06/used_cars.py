@@ -16,10 +16,10 @@ def main():
 
     limo = Car("Limo", 100)
     limo.add_fuel(20)
-    print(f"Limo has a fuel of", limo.fuel)
+    print(limo.fuel)
 
     distance_driven = limo.drive(115)
-    print(f"Limo drove {distance_driven}Km")
+    print(distance_driven)
 
     print(limo)
 
