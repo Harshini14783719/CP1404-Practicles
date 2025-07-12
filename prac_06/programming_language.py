@@ -13,4 +13,5 @@ class ProgrammingLanguage:
 
     def __str__(self):
         """convert object as a string for output"""
-        return f"{self.name}, {self.typing} Typing, Reflection={self.is_reflection}, First appeared in {self.year}"
+        return f"{self.name}, {self.typing} Typing, Reflection={self.is_reflection}, First appeared in {self.year}"\
+
