@@ -16,11 +16,8 @@ def main():
 
     limo = Car("Limo", 100)
     limo.add_fuel(20)
+    limo.drive(115)
     print(limo.fuel)
-
-    distance_driven = limo.drive(115)
-    print(distance_driven)
-
     print(limo)
 
 
