@@ -10,7 +10,7 @@ class Guitar:
         self.cost = cost
 
     def __str__(self):
-        """converts object to string for oitput"""
+        """converts object to string for output"""
         return f"{self.name} ({self.year}): ${self.cost}"
 
     def get_age(self):
