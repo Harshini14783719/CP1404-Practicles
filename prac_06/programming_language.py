@@ -6,3 +6,7 @@ class ProgramingLanguage:
         self.typing = typing
         self.is_reflection = is_reflection
         self.year = year
+
+    def is_dynamic(self):
+        """It will return True when typing is dynamic"""
+        return self.typing == "Dynamic"
