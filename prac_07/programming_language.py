@@ -13,7 +13,7 @@ class ProgrammingLanguage:
         self.typing = typing
         self.reflection = reflection
         self.year = year
-        self.pointer_arithmetic = pointer_arithmetic #new added field
+        self.pointer_arithmetic = pointer_arithmetic  # new added field
 
     def __repr__(self):
         """Return string representation of a ProgrammingLanguage."""
