@@ -13,6 +13,10 @@ class Guitar:
         """converts object to string for output"""
         return f"{self.name} ({self.year}): ${self.cost}"
 
+    def __lt__(self, other):
+        """Allow sorting guitars by year (older = less)."""
+        return self.year < other.year
+
     def get_age(self):
         """find age of guitar by deducting self.year from current year"""
         return CURRENT_YEAR - self.year
