@@ -29,4 +29,5 @@ def display_guitars(guitars):
         vintage = " (Vintage)" if guitar.is_vintage() else ""
         print(guitar, vintage)
 
+
 main()
