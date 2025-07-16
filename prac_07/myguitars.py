@@ -12,6 +12,7 @@ def main():
     display_guitars(guitars)
     print("\nadd new guitar to list:")
     add_new_guitars(guitars)
+    save_guitars(FILENAME, guitars)
 
 
 def load_guitars(filename):
@@ -40,6 +41,13 @@ def add_new_guitars(guitars):
         guitars.append(guitar_add)
         print(f"{guitar_add} added.")
         name = input("Name: ")
+
+
+def save_guitars(filename, guitars):
+    """write all guitar data to the csv file"""
+    with open(filename, 'w') as out_file:
+        for guitar in guitars:
+            print(f"{guitar.name},{guitar.year},{guitar.cost}", file=out_file)
 
 
 main()
