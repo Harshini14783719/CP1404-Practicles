@@ -66,7 +66,7 @@ def using_namedtuple():
     file_field_names = in_file.readline().strip().split(',')
     print(file_field_names)
     # Language will be a new subclass of the tuple data type class
-    Language = namedtuple('Language', 'name, typing, reflection, year')
+    Language = namedtuple('Language', 'name, typing, reflection, year, pointer_arithmetic')
     reader = csv.reader(in_file)  # use default dialect, Excel
 
     for row in reader:
