@@ -25,10 +25,13 @@ def main():
         parts = line.strip().split(',')
         # print(parts)  # debugging
         # Reflection is stored as a string (Yes/No) and we want a Boolean
-        reflection = parts[2] == "Yes"
+        name, typing, reflection_str, year_str, pointer_str = parts
+        reflection = reflection_str == "Yes"
+        year = int(year_str)
+        pointer_arithmetic = pointer_str == "Yes"
         # Construct a ProgrammingLanguage object using the elements
         # year should be an int
-        language = ProgrammingLanguage(parts[0], parts[1], reflection, int(parts[3]))
+        language = ProgrammingLanguage(name, typing, reflection, year, pointer_arithmetic)
         # Add the language we've just constructed to the list
         languages.append(language)
     # Close the file as soon as we've finished reading it
