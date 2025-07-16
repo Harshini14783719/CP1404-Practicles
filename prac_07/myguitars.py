@@ -4,13 +4,14 @@ FILENAME = "guitars.csv"
 
 
 def main():
-
     guitars = load_guitars(FILENAME)
     print("These are my guitars: ")
     display_guitars(guitars)
     guitars.sort()
     print("\nSorted guitars: ")
     display_guitars(guitars)
+    print("\nadd new guitar to list:")
+    add_new_guitars(guitars)
 
 
 def load_guitars(filename):
@@ -28,6 +29,17 @@ def display_guitars(guitars):
     for i, guitar in enumerate(guitars):
         vintage = " (Vintage)" if guitar.is_vintage() else ""
         print(guitar, vintage)
+
+
+def add_new_guitars(guitars):
+    name = input("Name: ")
+    while name != "":
+        year = int(input("Year: "))
+        cost = float(input("Cost: $"))
+        guitar_add = Guitar(name, year, cost)
+        guitars.append(guitar_add)
+        print(f"{guitar_add} added.")
+        name = input("Name: ")
 
 
 main()
