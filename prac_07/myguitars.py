@@ -16,3 +16,10 @@ def load_guitars(filename):
             name, year, cost = line.strip().split(',')
             guitars.append(Guitar(name, int(year), float(cost)))
     return guitars
+
+
+def display_guitars(guitars):
+    """Display a numbered list of guitars."""
+    for i, guitar in enumerate(guitars, 1):
+        vintage = " (Vintage)" if guitar.is_vintage() else ""
+        print(f"Guitar{i}: {guitar}{vintage}")
