@@ -6,6 +6,11 @@ FILENAME = "guitars.csv"
 def main():
 
     guitars = load_guitars(FILENAME)
+    print("These are my guitars: ")
+    display_guitars(guitars)
+    guitars.sort()
+    print("\nSorted guitars: ")
+    display_guitars(guitars)
 
 
 def load_guitars(filename):
@@ -20,6 +25,8 @@ def load_guitars(filename):
 
 def display_guitars(guitars):
     """Display a numbered list of guitars."""
-    for i, guitar in enumerate(guitars, 1):
+    for i, guitar in enumerate(guitars):
         vintage = " (Vintage)" if guitar.is_vintage() else ""
-        print(f"Guitar{i}: {guitar}{vintage}")
+        print(guitar, vintage)
+
+main()
