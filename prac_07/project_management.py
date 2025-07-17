@@ -35,7 +35,11 @@ def main():
         elif choice == "D":
             display_projects(projects)
         elif choice == "F":
-            filter_projects()
+            filter_projects(projects)
+        elif choice == "A":
+            add_new_projects(projects)
+        elif choice == "U":
+            update_project(projects)
 
 
 def load_projects(filename):
@@ -83,4 +87,21 @@ def add_new_projects(projects):
         print(f"{project_add} Added")
         name = input("Name:")
 
-    
+def update_project(projects):
+    """Update projects based on start date and priority."""
+    for i, project in enumerate(projects):
+        print(f"{i} {project}")
+    try:
+        choice = int(input("Project choice: "))
+        project_to_update = projects[choice]
+    except (ValueError, IndexError):
+        print("Invalid project number.")
+        return
+
+    print(project_to_update)
+    new_completion = input("New Percentage: ")
+    if new_completion != "":
+        project_to_update.completion_percentage = int(new_completion)
+    new_priority = input("New Priority: ")
+    if new_priority != "":
+        project_to_update.priority = int(new_priority)
