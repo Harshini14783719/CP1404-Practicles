@@ -11,7 +11,7 @@ class Project:
         self.completion_percentage = completion_percentage
 
     def __str__(self):
-        return (f"{self.name}, start: {self.start_date.strftime('%d/%m/%Y')}, "
+        return (f"{self.name}, start: {self.start_date}, "
                 f"priority: {self.priority}, estimate: ${self.cost_estimate:,.2f}, "
                 f"completion: {self.completion_percentage}%")
 
