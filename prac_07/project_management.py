@@ -23,7 +23,11 @@ def main():
     print(MENU)
     choice = input(">>> ").upper()
     while choice != "Q":
-        if choice == "L"
+        if choice == "L":
+            load_projects(FILENAME)
+        elif choice == "S":
+            
+
 
 
 
@@ -32,4 +36,5 @@ def load_projects(filename):
     with open(filename, "r") as in_file:
         for line in in_file:
             name, start_date, priority, cost_estimate,completion_percentage = line.strip().split(',')
-            projects.append(Project(name, datetime.strptime(start_date, "%d/%m/%Y").date()))
+            projects.append(Project(name, datetime.strptime(start_date, "%d/%m/%Y").date(), int(priority), float(cost_estimate), int(cost_estimate)))
+    return projects
