@@ -87,6 +87,7 @@ def add_new_projects(projects):
         print(f"{project_add} Added")
         name = input("Name:")
 
+
 def update_project(projects):
     """Update projects based on start date and priority."""
     for i, project in enumerate(projects):
@@ -105,3 +106,6 @@ def update_project(projects):
     new_priority = input("New Priority: ")
     if new_priority != "":
         project_to_update.priority = int(new_priority)
+
+
+main()
