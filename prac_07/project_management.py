@@ -3,6 +3,9 @@ estimated time: 2 hours
 time taken:
 """
 
+from project import Project
+from datetime import datetime
+
 FILENAME = "projects.txt"
 
 MENU = """\nMenu:
@@ -25,3 +28,8 @@ def main():
 
 
 def load_projects(filename):
+    projects = []
+    with open(filename, "r") as in_file:
+        for line in in_file:
+            name, start_date, priority, cost_estimate,completion_percentage = line.strip().split(',')
+            projects.append(Project(name, datetime.strptime(start_date, "%d/%m/%Y").date()))
