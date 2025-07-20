@@ -17,3 +17,6 @@ class DynamicLabelsApp(App):
             self.root.ids.main.add_widget(label)
 
         return self.root
+
+
+DynamicLabelsApp().run()
