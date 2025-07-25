@@ -8,3 +8,10 @@ def main():
 
     reliable_successes = 0
     unreliable_successes = 0
+    tests = 100
+
+    for i in range:
+        if reliable_car(1) > 0:
+            reliable_successes += 1
+        if unreliable_car(1) > 0:
+            unreliable_successes += 1
