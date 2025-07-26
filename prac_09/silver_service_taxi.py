@@ -3,7 +3,7 @@ from taxi import Taxi
 
 class SilverServiceTaxi(Taxi):
 
-    flagfile = 4.50
+    flagfall = 4.50
 
     def __init__(self, name="", fuel=0, fanciness=0.0):
         super().__init__(name, fuel)
