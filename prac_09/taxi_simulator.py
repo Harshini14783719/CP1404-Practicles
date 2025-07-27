@@ -1,5 +1,6 @@
 from taxi import Taxi
 from silver_service_taxi import SilverServiceTaxi
+MENU = "q)uit, c)hoose taxi, d)rive"
 
 
 def main():
@@ -13,7 +14,6 @@ def main():
     total_bill = 0.0
 
     print("Let's drive!")
-    MENU = "q)uit, c)hoose taxi, d)rive"
     choice = input(MENU + "\n>>> ").lower()
 
     while choice != "q":
