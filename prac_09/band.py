@@ -13,4 +13,5 @@ class Band:
         return f"{self.name} ({', '.join(str(member) for member in self.members)})"
 
     def play(self):
-        return
+        """Return the result of each member playing their instrument."""
+        return '\n'.join(member.play() for member in self.members)
