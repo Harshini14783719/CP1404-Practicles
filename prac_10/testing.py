@@ -51,6 +51,18 @@ def run_tests():
     default_car = Car()
     assert default_car.fuel == 0, "Car does not set default fuel correctly"
 
+    def format_phrase(phrase):
+        """
+        Format a phrase as a sentence, starting with a capital and ending with a single full stop.
+        >>> format_phrase("hello")
+        'Hello.'
+        >>> format_phrase("It is an ex parrot.")
+        'It is an ex parrot.'
+        >>> format_phrase("good morning")
+        'Good morning.'
+        """
+        pass
+
 
 run_tests()
 
