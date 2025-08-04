@@ -14,9 +14,6 @@ def greet(name=""):
     return f"Hello {name}"
 
 
-app.secret_key = 'your-secret-key-here'
-
-
 if __name__ == '__main__':
     app.run()
 
